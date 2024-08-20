@@ -4,54 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PXI Fusion</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <div class="container">
     <h1>PXI Fusion</h1>
-    <button id="open-prodigy">Open Prodigy</button>
-    <div class="instructions">
+    <button id="openProdigy">Open Prodigy</button>
+    <div class="section">
       <h2>Instructions</h2>
-      <div id="console-instructions">
-        <h3>Console Version</h3>
-        <p>To use the PXI Fusion Cheat Menu via the console:</p>
-        <ul>
-          <li>Open the console in Prodigy by pressing <code>Ctrl+Shift+I</code> (or <code>Cmd+Option+I</code> on Mac).</li>
-          <li>Paste the following code into the console:</li>
-        </ul>
-        <pre id="code-box">
-(function() {
+      <h3>Console Version</h3>
+      <p>1. Open the console in your browser (usually F12 or Ctrl+Shift+I).</p>
+      <p>2. Paste the code below into the console and press Enter.</p>
+      <textarea id="consoleCode">(function() {
     const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";
-
     fetch(scriptUrl)
         .then(response => response.text())
         .then(code => {
             eval(code);
         })
         .catch(error => console.error("Failed to load the script:", error));
-})();
-        </pre>
-        <button id="copy-code">Copy Code</button>
-      </div>
-      <div id="bookmark-instructions">
-        <h3>Bookmark Version</h3>
-        <p>To use PXI Fusion via a bookmark:</p>
-        <ul>
-          <li>Create a new bookmark with the following JavaScript code:</li>
-        </ul>
-        <pre>
-javascript:(function()%7Bconst%20scriptUrl%20=%20"https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";fetch(scriptUrl).then(response%20=%3E%20response.text()).then(code%20=%3E%20eval(code)).catch(error%20=%3E%20console.error("Failed%20to%20load%20the%20script:",%20error));%7D)();
-        </pre>
-        <a href="javascript:(function()%7Bconst%20scriptUrl%20=%20'https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion';fetch(scriptUrl).then(response%20=%3E%20response.text()).then(code%20=%3E%20eval(code)).catch(error%20=%3E%20console.error('Failed%20to%20load%20the%20script:',%20error));%7D)();" draggable="true">Drag this bookmarklet to your bookmarks bar</a>
-      </div>
+})();</textarea>
+      <button id="copyConsoleCode">Copy Code</button>
+
+      <h3>Bookmark Version</h3>
+      <p>1. Create a new bookmark.</p>
+      <p>2. Set the URL to the following:</p>
+      <textarea id="bookmarkCode">javascript:(function() {
+    const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";
+    fetch(scriptUrl)
+        .then(response => response.text())
+        .then(code => {
+            eval(code);
+        })
+        .catch(error => console.error("Failed to load the script:", error));
+})();</textarea>
+      <button id="copyBookmarkCode">Copy Code</button>
     </div>
-    <div class="links">
-      <a id="discord-link" href="https://discord.gg/VAkGbXKwhY" target="_blank">
-        <img src="icons/dis.png" alt="Discord">
-      </a>
-      <a id="youtube-link" href="https://www.youtube.com/@PXIFusionX" target="_blank">
-        <img src="icons/Yt.png" alt="YouTube">
-      </a>
+    <div class="socials">
+      <button id="discordBtn">
+        <img src="icons/dis.png" alt="Discord"> Join Discord
+      </button>
+      <button id="youtubeBtn">
+        <img src="icons/yt.png" alt="YouTube"> YouTube Channel
+      </button>
     </div>
   </div>
   <script src="popup.js"></script>

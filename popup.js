@@ -1,26 +1,30 @@
-document.getElementById('open-prodigy').addEventListener('click', () => {
+document.getElementById('openProdigy').addEventListener('click', function() {
     chrome.tabs.create({ url: 'https://math.prodigygame.com/?launcher=true&code=*' });
   });
   
-  document.getElementById('copy-code').addEventListener('click', () => {
-    const code = document.getElementById('code-box').innerText;
-    navigator.clipboard.writeText(code).then(() => {
-      alert('Code copied to clipboard!');
-    });
+  document.getElementById('copyConsoleCode').addEventListener('click', function() {
+    copyToClipboard(document.getElementById('consoleCode').value);
   });
   
-  // Send installation info to Discord webhook
-  chrome.runtime.onInstalled.addListener(() => {
-    fetch('https://discord.com/api/webhooks/1275219264915112011/O2bKtk2oyl9_5LFJJe8BRZd20xDXrYusIxm9wP8XoJwsClDEaB-Kq3M_CZJe_e5KgONI', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        content: `A new user has added the PXI Fusion extension!`,
-        embeds: [{
-          title: 'New User Installed PXI Fusion',
-          fields: [{ name: 'Timestamp', value: new Date().toISOString() }]
-        }]
-      })
-    });
+  document.getElementById('copyBookmarkCode').addEventListener('click', function() {
+    copyToClipboard(document.getElementById('bookmarkCode').value);
+  });
+  
+  function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Code copied to clipboard!');
+  }
+  
+  document.getElementById('discordBtn').addEventListener('click', function() {
+    chrome.tabs.create({ url: 'https://discord.gg/VAkGbXKwhY' });
+  });
+  
+  document.getElementById('youtubeBtn').addEventListener('click', function() {
+    chrome.tabs.create({ url: 'https://www.youtube.com/@PXIFusionX' });
   });
   
