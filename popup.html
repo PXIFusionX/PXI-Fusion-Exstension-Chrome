@@ -10,13 +10,8 @@
     <div class="container">
         <h1>PXI Fusion</h1>
         <button id="open-prodigy">Open Prodigy</button>
-
-        <h2>Instructions</h2>
-        <p>To use the PXI Fusion Cheat Menu:</p>
-        <h3>Console Version</h3>
-        <p>1. Open the console by pressing <strong>F12</strong> or <strong>Ctrl+Shift+I</strong> (Windows) / <strong>Cmd+Option+I</strong> (Mac).</p>
-        <p>2. Paste the following code:</p>
-        <textarea id="console-code" readonly>(function() {
+        <textarea id="code-box" readonly>
+(function() {
     const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";
     fetch(scriptUrl)
         .then(response => response.text())
@@ -24,28 +19,27 @@
             eval(code);
         })
         .catch(error => console.error("Failed to load the script:", error));
-})();</textarea>
-        <button id="copy-console-code">Copy Code</button>
+})();
+        </textarea>
+        <button id="copy-code">Copy Code</button>
 
-        <h3>Bookmark Version</h3>
-        <p>1. Create a new bookmark in your browser.</p>
-        <p>2. Use the following code as the URL:</p>
-        <textarea id="bookmark-code" readonly>javascript:(function(){const scriptUrl="https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";fetch(scriptUrl).then(response=>response.text()).then(code=>{eval(code);}).catch(error=>console.error("Failed to load the script:",error));})();</textarea>
-        <button id="copy-bookmark-code">Copy Bookmark Code</button>
-
-        <div id="social-icons">
-            <a id="discord-link" href="https://discord.gg/VAkGbXKwhY" target="_blank">
-                <img src="icons/dis.png" alt="Discord">
-            </a>
-            <a id="youtube-link" href="https://www.youtube.com/@PXIFusionX" target="_blank">
-                <img src="icons/yt.png" alt="YouTube">
-            </a>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <p>Console Version:</p>
+            <p>1. Open the console in Prodigy.</p>
+            <p>2. Paste the code from above and press Enter.</p>
+            <p>Bookmark Version:</p>
+            <p>1. Create a new bookmark.</p>
+            <p>2. Use the code above as the URL.</p>
         </div>
 
-        <h2>Draggable Bookmark</h2>
-        <a href="javascript:(function(){const scriptUrl='https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion';fetch(scriptUrl).then(response=>response.text()).then(code=>{eval(code);}).catch(error=>console.error('Failed to load the script:',error));})();" id="draggable-bookmark">PXI Fusion</a>
-    </div>
+        <a id="draggable-bookmark" href="javascript:(function() { const scriptUrl = 'https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion'; fetch(scriptUrl).then(response => response.text()).then(code => { eval(code); }).catch(error => console.error('Failed to load the script:', error)); })();">Drag Me!</a>
 
+        <div id="social-icons">
+            <a href="https://www.youtube.com/@PXIFusionX" target="_blank"><img src="icons/Yt.png" alt="YouTube"></a>
+            <a href="https://discord.gg/VAkGbXKwhY" target="_blank"><img src="icons/dis.png" alt="Discord"></a>
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
