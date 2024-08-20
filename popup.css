@@ -8,34 +8,35 @@ body {
 }
 
 .container {
-  padding: 20px;
-  border-radius: 15px;
+  padding: 30px;
+  border-radius: 20px;
   background: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
-  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.7);
+  max-width: 800px;
   margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 h1 {
   color: #00bfff;
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px #00bfff;
+  text-shadow: 0 0 15px #00bfff;
 }
 
 button {
   background: #003366;
   color: #00bfff;
   border: 2px solid #00bfff;
-  border-radius: 10px;
-  padding: 10px 20px;
+  border-radius: 12px;
+  padding: 12px 25px;
   cursor: pointer;
-  font-size: 16px;
-  margin: 10px;
+  font-size: 18px;
+  margin: 15px;
   transition: background 0.3s ease;
 }
 
@@ -46,28 +47,30 @@ button:hover {
 
 textarea {
   width: 100%;
-  height: 120px;
-  border-radius: 10px;
+  height: 150px;
+  border-radius: 12px;
   border: 2px solid #00bfff;
   background: #001f3f;
   color: #00bfff;
-  padding: 10px;
+  padding: 15px;
   resize: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: 'Courier New', monospace;
 }
 
 #social-icons {
-  margin-top: 20px;
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
 }
 
 #social-icons a {
-  margin: 0 10px;
+  display: block;
 }
 
 #social-icons img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   transition: opacity 0.3s ease;
 }
@@ -78,14 +81,14 @@ textarea {
 
 #draggable-bookmark {
   display: inline-block;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 15px;
+  margin-top: 30px;
   background: #003366;
   color: #00bfff;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 2px solid #00bfff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   transition: background 0.3s ease;
 }
 
