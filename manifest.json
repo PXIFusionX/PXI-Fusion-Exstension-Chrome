@@ -1,19 +1,18 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "PXI Fusion",
     "version": "1.0",
     "description": "A loader for PXI Fusion to hack Prodigy Math Game.",
     "permissions": [
       "activeTab",
-      "scripting",
       "webRequest",
       "webRequestBlocking",
-      "https://*.prodigygame.com/*"
+      "*://*.prodigygame.com/*"
     ],
     "background": {
-      "service_worker": "background.js"
+      "scripts": ["background.js"]
     },
-    "action": {
+    "browser_action": {
       "default_popup": "popup.html",
       "default_icon": {
         "16": "icons/icon16.png",

