@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PXI Fusion</title>
-  <link rel="stylesheet" href="popup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PXI Fusion</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class="container">
-    <h1>PXI Fusion</h1>
-    <button id="openProdigy">Open Prodigy</button>
-    <div class="section">
-      <h2>Instructions</h2>
-      <h3>Console Version</h3>
-      <p>1. Open the console in your browser (usually F12 or Ctrl+Shift+I).</p>
-      <p>2. Paste the code below into the console and press Enter.</p>
-      <textarea id="consoleCode">(function() {
-    const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";
-    fetch(scriptUrl)
-        .then(response => response.text())
-        .then(code => {
-            eval(code);
-        })
-        .catch(error => console.error("Failed to load the script:", error));
-})();</textarea>
-      <button id="copyConsoleCode">Copy Code</button>
-
-      <h3>Bookmark Version</h3>
-      <p>1. Create a new bookmark.</p>
-      <p>2. Set the URL to the following:</p>
-      <textarea id="bookmarkCode">javascript:(function() {
-    const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";
-    fetch(scriptUrl)
-        .then(response => response.text())
-        .then(code => {
-            eval(code);
-        })
-        .catch(error => console.error("Failed to load the script:", error));
-})();</textarea>
-      <button id="copyBookmarkCode">Copy Code</button>
+    <div id="sci-fi-container">
+        <h1 class="sci-fi-title">PXI Fusion</h1>
+        <button id="openProdigy" class="sci-fi-button">Open Prodigy</button>
+        <div class="instructions">
+            <h2 class="sci-fi-heading">Console Version</h2>
+            <p>1. Open the console (F12 or Ctrl+Shift+I).</p>
+            <p>2. Paste the following code:</p>
+            <div class="code-box" id="consoleCode">
+                <code>(function() {const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion"; fetch(scriptUrl).then(response => response.text()).then(code => {eval(code);}).catch(error => console.error("Failed to load the script:", error));})();</code>
+            </div>
+            <button id="copyConsoleCode" class="sci-fi-button">Copy Code</button>
+        </div>
+        <div class="instructions">
+            <h2 class="sci-fi-heading">Bookmark Version</h2>
+            <p>Drag the link below to your bookmarks bar:</p>
+            <a href="javascript:(function() {const scriptUrl = 'https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion';fetch(scriptUrl).then(response => response.text()).then(code => {eval(code);}).catch(error => console.error('Failed to load the script:', error));})();" class="bookmark-link">PXI Fusion</a>
+        </div>
+        <div id="social-buttons">
+            <img src="icons/dis.png" id="discordButton" class="sci-fi-icon" alt="Discord">
+            <img src="icons/yt.png" id="youtubeButton" class="sci-fi-icon" alt="YouTube">
+        </div>
     </div>
-    <div class="socials">
-      <button id="discordBtn">
-        <img src="icons/dis.png" alt="Discord"> Join Discord
-      </button>
-      <button id="youtubeBtn">
-        <img src="icons/yt.png" alt="YouTube"> YouTube Channel
-      </button>
-    </div>
-  </div>
-  <script src="popup.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>

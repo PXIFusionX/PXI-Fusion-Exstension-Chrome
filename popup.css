@@ -1,51 +1,87 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #333333;
-  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #00ccff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#sci-fi-container {
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 3px #00ccff;
   padding: 20px;
+  width: 350px;
+  text-align: center;
 }
 
-.container {
-  max-width: 400px;
-  margin: 0 auto;
+.sci-fi-title {
+  font-size: 24px;
+  color: #00ccff;
 }
 
-button {
-  background-color: #008cba;
-  color: #ffffff;
-  padding: 10px 20px;
-  margin: 10px 0;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #005f5f;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  background-color: #f4f4f4;
-  color: #333333;
-  border: 1px solid #cccccc;
+.sci-fi-heading {
+  font-size: 20px;
+  color: #00ccff;
   margin-bottom: 10px;
 }
 
-h1, h2, h3 {
-  color: #333333;
+.sci-fi-button {
+  background-color: #004466;
+  color: #00ccff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
-.socials button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sci-fi-button:hover {
+  background-color: #0077cc;
+}
+
+.code-box {
+  background-color: #1a1a1a;
+  border: 1px solid #00ccff;
+  border-radius: 10px;
   padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ccff;
+  overflow-x: auto;
 }
 
-.socials img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+.bookmark-link {
+  display: block;
+  background-color: #004466;
+  color: #00ccff;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.bookmark-link:hover {
+  background-color: #0077cc;
+}
+
+#social-buttons {
+  margin-top: 20px;
+}
+
+.sci-fi-icon {
+  width: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.sci-fi-icon:hover {
+  transform: scale(1.2);
 }
