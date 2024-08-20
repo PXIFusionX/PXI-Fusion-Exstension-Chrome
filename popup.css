@@ -1,87 +1,63 @@
 body {
-  font-family: 'Orbitron', sans-serif;
-  background-color: #0d0d0d;
-  color: #00ccff;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1f1f1f, #4c4c4c);
+  color: #fff;
+  text-align: center;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-#sci-fi-container {
-  background: #1a1a1a;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px 3px #00ccff;
+.container {
   padding: 20px;
-  width: 350px;
-  text-align: center;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  margin: auto;
 }
 
-.sci-fi-title {
+h1 {
+  color: #00ff00;
   font-size: 24px;
-  color: #00ccff;
+  margin-bottom: 20px;
 }
 
-.sci-fi-heading {
-  font-size: 20px;
-  color: #00ccff;
-  margin-bottom: 10px;
-}
-
-.sci-fi-button {
-  background-color: #004466;
-  color: #00ccff;
+button {
+  background: #007bff;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  font-size: 16px;
 }
 
-.sci-fi-button:hover {
-  background-color: #0077cc;
+button:hover {
+  background: #0056b3;
 }
 
-.code-box {
-  background-color: #1a1a1a;
-  border: 1px solid #00ccff;
-  border-radius: 10px;
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #333;
+  color: #fff;
   padding: 10px;
-  margin-bottom: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  color: #00ccff;
-  overflow-x: auto;
+  resize: none;
 }
 
-.bookmark-link {
-  display: block;
-  background-color: #004466;
-  color: #00ccff;
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.bookmark-link:hover {
-  background-color: #0077cc;
-}
-
-#social-buttons {
+#social-icons {
   margin-top: 20px;
 }
 
-.sci-fi-icon {
-  width: 40px;
-  margin: 0 10px;
+#social-icons img {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
   cursor: pointer;
-  transition: transform 0.3s;
 }
 
-.sci-fi-icon:hover {
-  transform: scale(1.2);
+#social-icons img:hover {
+  opacity: 0.8;
 }

@@ -9,45 +9,36 @@
 <body>
     <div class="container">
         <h1>PXI Fusion</h1>
-        <button id="openProdigy">Open Prodigy</button>
+        <button id="open-prodigy">Open Prodigy</button>
 
-        <h2>PXI Fusion Cheat Menu</h2>
-        <p>Follow the instructions below to activate the cheat menu:</p>
-
-        <h3>Console Version</h3>
-        <p>1. Open the developer console in your browser.</p>
-        <p>2. Paste the following code into the console:</p>
-        <textarea id="consoleCode" readonly>
-(function() {
+        <h2>Instructions</h2>
+        <p>Console Version: Open the console and paste the following code:</p>
+        <textarea id="console-code" readonly>(function() {
     const scriptUrl = "https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";
-
     fetch(scriptUrl)
         .then(response => response.text())
         .then(code => {
             eval(code);
         })
         .catch(error => console.error("Failed to load the script:", error));
-})();
-        </textarea>
-        <button id="copyConsoleCode">Copy Code</button>
+})();</textarea>
+        <button id="copy-console-code">Copy Code</button>
 
         <h3>Bookmark Version</h3>
-        <p>1. Create a new bookmark in your browser.</p>
-        <p>2. Set the URL to the following code:</p>
-        <textarea id="bookmarkCode" readonly>
-javascript:(function(){const scriptUrl="https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";fetch(scriptUrl).then(response=>response.text()).then(code=>{eval(code);}).catch(error=>console.error("Failed to load the script:",error));})();
-        </textarea>
-        <button id="copyBookmarkCode">Copy Code</button>
+        <p>Instructions for a JavaScript bookmark:</p>
+        <textarea id="bookmark-code" readonly>javascript:(function(){const scriptUrl="https://raw.githubusercontent.com/DragonProdHax/PXI/main/PXI%20Fusion";fetch(scriptUrl).then(response=>response.text()).then(code=>{eval(code);}).catch(error=>console.error("Failed to load the script:",error));})();</textarea>
+        <button id="copy-bookmark-code">Copy Bookmark Code</button>
 
-        <div class="social-buttons">
-            <button id="discordButton">
+        <div id="social-icons">
+            <a id="discord-link" href="https://discord.gg/VAkGbXKwhY" target="_blank">
                 <img src="icons/dis.png" alt="Discord">
-            </button>
-            <button id="youtubeButton">
+            </a>
+            <a id="youtube-link" href="https://www.youtube.com/@PXIFusionX" target="_blank">
                 <img src="icons/yt.png" alt="YouTube">
-            </button>
+            </a>
         </div>
     </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
