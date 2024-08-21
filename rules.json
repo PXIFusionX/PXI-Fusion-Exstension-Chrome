@@ -34,7 +34,7 @@
       "action": {
         "type": "redirect",
         "redirect": {
-          "url": "https://raw.githubusercontent.com/ProdigyPNP/ProdigyMathGameHacking/master/.github/ppnp.png"
+          "url": "https://math.prodigygame.com/?launcher=true&code=*"
         }
       },
       "condition": {
