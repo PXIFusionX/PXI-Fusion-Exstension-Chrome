@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "PXI Fusion",
     "version": "1.0",
-    "description": "A loader for PXI Fusion to hack Prodigy Math Game.",
+    "description": "A loader hack Prodigy Math Game.",
     "permissions": [
       "activeTab",
       "webRequest",
