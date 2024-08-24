@@ -10,13 +10,15 @@ function storeExtensionData() {
         console.log("PXI Fusion version and installation status stored in chrome.storage.local.");
     });
 
-    // Store data in localStorage (only available in the context of a web page)
+    // Inject content script into every tab
     chrome.tabs.query({}, function(tabs) {
-        for (let tab of tabs) {
-            chrome.tabs.executeScript(tab.id, {
-                code: `localStorage.setItem('PXI Version', '1.0'); console.log('PXI Version set to:', localStorage.getItem('PXI Version'));`
-            });
-        }
+        tabs.forEach(tab => {
+            if (tab.url.startsWith('http://') || tab.url.startsWith('https://')) {
+                chrome.tabs.executeScript(tab.id, {
+                    file: 'content.js'
+                });
+            }
+        });
     });
 }
 
@@ -49,9 +51,11 @@ chrome.runtime.onInstalled.addListener(function(details) {
 // Listener that ensures data is injected when the extension is loaded
 chrome.runtime.onStartup.addListener(storeExtensionData);
 
-// Also inject script into newly created tabs
+// Also inject script into newly created tabs (excluding chrome:// URLs)
 chrome.tabs.onCreated.addListener(function(tab) {
-    chrome.tabs.executeScript(tab.id, {
-        code: `localStorage.setItem('PXI Version', '1.0'); console.log('PXI Version set to:', localStorage.getItem('PXI Version'));`
-    });
+    if (tab.url.startsWith('http://') || tab.url.startsWith('https://')) {
+        chrome.tabs.executeScript(tab.id, {
+            file: 'content.js'
+        });
+    }
 });
